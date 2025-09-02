@@ -1,0 +1,187 @@
+/* tailwindcss */
+@import "tailwindcss";
+@plugin "daisyui";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+}
+
+:where(:root),
+:root:has(input.theme-controller[value=light]:checked),
+[data-theme=light] {
+    color-scheme: light;
+    --color-base-100: oklch(100% 0 0);
+    --color-base-200: oklch(98% 0 0);
+    --color-base-300: oklch(95% 0 0);
+    --color-base-content: oklch(21% 0.006 285.885);
+    --color-primary: oklch(45% 0.24 277.023);
+    --color-primary-content: oklch(93% 0.034 272.788);
+    --color-secondary: oklch(65% 0.241 354.308);
+    --color-secondary-content: oklch(94% 0.028 342.258);
+    --color-accent: oklch(77% 0.152 181.912);
+    --color-accent-content: oklch(38% 0.063 188.416);
+    --color-neutral: oklch(14% 0.005 285.823);
+    --color-neutral-content: oklch(92% 0.004 286.32);
+    --color-info: oklch(74% 0.16 232.661);
+    --color-info-content: oklch(29% 0.066 243.157);
+    --color-success: oklch(76% 0.177 163.223);
+    --color-success-content: oklch(37% 0.077 168.94);
+    --color-warning: oklch(82% 0.189 84.429);
+    --color-warning-content: oklch(41% 0.112 45.904);
+    --color-error: oklch(71% 0.194 13.428);
+    --color-error-content: oklch(27% 0.105 12.094);
+    --radius-selector: 0.5rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}
+
+.banner_slide_item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7.5rem;
+}
+
+.banner_image {
+    position: relative;
+}
+
+.banner_image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 747px;
+    width: 100%;
+    max-height: 747px;
+    height: 100%;
+    background-color: #4c81d1;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 22px !important;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slider_container>.slick-slider>.slick-dots>li.slick-active button:before {
+    color: #029fea !important;
+}
+
+.slider_container>.slick-slider>.slick_slider>.slick-dots {
+    position: absolute;
+    bottom: 100px !important;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slider_container>.slick-slider>.slick-prev,
+.slider_container>.slick-slider>.slick-next {
+    z-index: 5 !important;
+}
+
+.slick-prev {
+    left: -95px !important;
+}
+
+.slick-next {
+    right: -95px !important;
+}
+
+
+.slider_container>.slick-slider>.slick-prev:before,
+.slider_container>.slick-slider>.slick-next:before {
+    font-family: 'slick';
+    font-size: 52px !important;
+    line-height: 1;
+    opacity: .75;
+    color: #029fea !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.deilivery_component {
+    margin-top: -4rem;
+    position: relative;
+    z-index: 5;
+}
+
+.features_slider>.slick-slider>.slick-next:before,
+.slick-prev:before {
+    font-size: 39px !important;
+    color: #029fea !important;
+
+}
+
+.features_slider>.slick-prev:before,
+.slick-next:before {
+    font-size: 39px !important;
+    color: #029fea !important;
+
+}
+
+.client_say_description{
+    position: relative;
+}
+.client_say_description::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -27px;
+    width: 3px;
+    height: 100%;
+    background-color: #029fea;
+}
+
+
+
+
+
+
+
+
+
+@layer base {
+    body {
+        font-family: var(--font-inter);
+    }
+}
+
+/* @layer components {
+    .brand {
+        @apply flex items-center justify-center w-full bg-white shadow-md p-7;
+    }
+    .delivery_wrapper {
+        @apply text-black;
+    }
+    .delivery_wrapper h4 {
+        @apply text-base text-[#272343] capitalize font-inter font-medium mb-2.5;
+    }
+    .delivery_wrapper p {
+        @apply text-sm text-[#9a9caa] font-inter font-normal;
+    }
+} */
